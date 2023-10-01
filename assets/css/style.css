@@ -25,6 +25,7 @@
 }
 .nav-section > .logo-container{
     display: flex;
+    gap: 5px;
 }
 .nav-section >.logo-container > .logo, .menu{
     width: 30px;
