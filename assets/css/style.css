@@ -18,6 +18,16 @@
 .nav-section{
     grid-area: nav;
     background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ececec;
+}
+.nav-section > .logo-container{
+    display: flex;
+}
+.nav-section >.logo-container > .logo, .menu{
+    width: 30px;
 }
 
 .filter-section{
