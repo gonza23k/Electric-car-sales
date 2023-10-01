@@ -45,6 +45,10 @@
 }
 .main-section{
     grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
 }
 .main-section > .cards-container{
     display: flex;
@@ -73,6 +77,15 @@
     background-color: blue;
     color: #ececec;
     border: none;
+    border-radius: 5px;
+}
+.main-section > .navigation{
+    display: flex;
+}
+.main-section > .navigation > button{
+    width: 30px;
+    height: 30px;
+    color: blue;
 }
 .foot-section{
     grid-area: footer;
@@ -89,3 +102,25 @@
 .foot-section > div > img{
     width: 20px;
 }
+
+@media (min-width: 576px){
+    .nav-section{
+        background-color: rgb(172, 165, 103);
+}
+    .container{
+        grid-template-areas:
+            "nav filters"
+            "nav main"
+            "footer main"
+        ;
+        grid-template-columns: 150px 1fr;
+        grid-template-rows: 60px 1fr 60px;
+    }
+    .main-section > .cards-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .nav-section >.logo-container > .logo, .menu{
+        width: 30px;
+    }
+}    
